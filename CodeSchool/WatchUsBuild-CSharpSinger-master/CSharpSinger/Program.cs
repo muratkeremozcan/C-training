@@ -1,5 +1,5 @@
 ﻿using System;
-using System.IO;
+using System.IO; // to read a file 
 
 namespace CSharpSinger
 {
@@ -22,11 +22,11 @@ namespace CSharpSinger
                 if (response.ToLower() == "quit") // new method
                     break;
 
-                var song = 0;
-                if(!int.TryParse(response, out song))
+                var song = 0; // variable to contain 'out song'
+                if(!int.TryParse(response, out song)) // try to parse the first argument, if successful, populate the 2nd argument
                 {
                     Console.WriteLine("Invalid response, try again.");
-                    continue;
+                    continue; // inside a whileloop, stop execution of code and start loop from beginning
                 }
                 else
                     song--; //Arrays count from zero, people don't
@@ -34,14 +34,14 @@ namespace CSharpSinger
                 // set the directory to something for yourself
                 var fileName = songs[song] + ".txt";
 
-                if (!File.Exists(fileName)) // new condition type
+                if (!File.Exists(fileName)) // new condition type, if file does NOT exist
                 {
                     Console.WriteLine("File not found, try again");
                     continue; // new keyword
                 }
 
                 Console.WriteLine("===============================");
-                var lines = File.ReadAllLines(fileName); // new method
+                var lines = File.ReadAllLines(fileName); // new method, gives an array of strings for the file
                 foreach (var line in lines)
                 {
                     Singer.WriteLine(line);
