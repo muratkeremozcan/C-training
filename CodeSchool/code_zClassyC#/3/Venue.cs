@@ -11,8 +11,7 @@ public class Venue
         Band band = new Band();
         band.Name = name;
         // Bands[0] = band;    // array
-           Bands.Add(band);    // list
-    
+           Bands.Add(band);    // list    
     }
 
     public void Announce()
