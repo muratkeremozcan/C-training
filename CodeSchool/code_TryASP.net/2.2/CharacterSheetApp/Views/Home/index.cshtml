@@ -1,8 +1,19 @@
 @model CharacterSheetApp.Models.Equipment
-<h2>Equipment</h2>
+<h2>Equipment:</h2>
+
+<form asp-action="Create"   class="form-inline mbm">
+  <div class="form-group">
+    <input name="EquipmentName" />
+    <input type="submit" value="Add Equipment" class="form-control" />
+  </div>
+</form>
+
+<h4>Equipment:</h4>
 
 <div>
   <ul>
-    <li>@Model.Name</li>
+    <li>
+      <label>@Model.Name</label>
+    </li>
   </ul>
 </div>
