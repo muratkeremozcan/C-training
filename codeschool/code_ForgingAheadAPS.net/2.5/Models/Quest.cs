@@ -8,6 +8,7 @@ namespace ForgingAhead.Models
   {
     [Key]
     public string Name { get; set; }
+    [Display(Name = "Is Active")]
     public bool IsActive { get; set; }
     // set up relationship here
     public List<Character> Characters { get; set; }
